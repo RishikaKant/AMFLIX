@@ -23,8 +23,7 @@
         <li><a href="#how-to-get-the-API-key?">How to get the API key</a></li>
         <li><a href="#how-to-run-the-project?">How to run the project</a></li>
       </ul>
-    </li>
-    <li></li>
+   </li>
     <li><a href="#navigating-through-the-app">Navigating through the App</a></li>
     <ul>
       <li><a href="#home-page">Home page</a></li>
