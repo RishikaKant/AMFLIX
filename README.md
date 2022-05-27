@@ -101,27 +101,27 @@ More about Cosine Similarity : [Understanding the Math behind Cosine Similarity]
 ## Navigating Through The App
 
 ### Home page
-<img src="home_page.png" alt="home page" width="700"/>
+<img src="images/home_page.png" alt="home page" width="700"/>
 
 ### Searching for a movie
 The search bar has autocomplete feature.
-<img src="search.png" alt="search" width="700"/>
+<img src="images/search.png" alt="search" width="700"/>
 
 ### Details of the movie searched
-<img src="movie_details.png" alt="movie details" width="700"/>
+<img src="images/movie_details.png" alt="movie details" width="700"/>
 
 ### Movie's Cast
-<img src="cast.png" alt="cast" width="700"/>
+<img src="images/cast.png" alt="cast" width="700"/>
 
 We can also know more about the cast
-<img src="cast_info.png" alt="cast info" width="700"/>
+<img src="images/cast_info.png" alt="cast info" width="700"/>
 
 ### Recommended Movies
 Movies similar to the the one searched by the user are recommended.
-<img src="rec_mov.png" alt="recommended movies" width="700"/>
+<img src="images/rec_mov.png" alt="recommended movies" width="700"/>
 
 ### User Reviews
-<img src="reviews.png" alt="user reviews" width="700"/>
+<img src="images/reviews.png" alt="user reviews" width="700"/>
 
 
 <!-- ACKNOWLEGEMENTS -->
