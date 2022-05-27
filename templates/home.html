@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AMFLIX</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- Auto Complete -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/css/autoComplete.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='style.css') }}"
+    />
+    <script type="text/javascript">
+      var films = {{suggestions|tojson}};
+    </script>
+  </head>
+
+  <body id="content">
+    <div class="navbar">
+      <div class="navbar-brand">
+        <a href="/" style="text-decoration: none;">
+          <span class="nav">AMFLIX</span>
+        </a>
+      </div>
+
+      <!-- CAMERA ANIMATION SECTION STARTS-->
+      <div class="icon-container">
+        <div class="icon">
+          <svg
+            enable-background="new 0 0 64 55"
+            version="1.1"
+            viewBox="0 0 64 55"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <style type="text/css">
+              .camera {
+                fill: none;
+                stroke: #000000;
+                stroke-miterlimit: 10;
+              }
+              .camera-reel {
+                fill: #bfa9a4;
+                stroke: #000000;
+                stroke-miterlimit: 10;
+              }
+              .camera-container {
+                fill: #402a2e;
+                stroke: #000000;
+                stroke-miterlimit: 10;
+              }
+              .camera-triangle {
+                fill: #fef5bb;
+                stroke: #000000;
+                stroke-miterlimit: 10;
+              }
+            </style>
+            <path class="camera" d="m10.8 21.7" />
+            <polygon class="camera-reel" points="19.5 13.8 19.5 13.8" />
+            <circle class="camera-reel" cx="19.5" cy="13.8" r="6.6" />
+            <circle class="camera-reel" cx="35.3" cy="12.2" r="8.4" />
+            <path
+              class="camera-container"
+              d="m44.2 49.3h-32c-1 0-1.8-0.9-1.8-1.8v-24.5c0-1 0.9-1.8 1.8-1.8h32c1 0 1.8 0.9 1.8 1.8v24.5c0 1-0.8 1.8-1.8 1.8z"
+            />
+            <path
+              class="camera-reel"
+              d="m56.3 45.9v-21.3c0-0.7-0.8-1.1-1.4-0.9l-9 4.9v13.1l9 4.9c0.7 0.5 1.4 0 1.4-0.7z"
+            />
+            <path
+              class="camera-triangle"
+              d="m22.5 29.1v12.2c0 0.7 0.7 1 1.2 0.7l9.9-6.1c0.5-0.3 0.5-1 0-1.3l-9.9-6c-0.5-0.4-1.2 0-1.2 0.5z"
+            />
+            <path
+              class="camera-reel animate-left-reel"
+              d="m16.2 13.9c0 1.8 1.5 3.2 3.3 3.2s3.3-1.5 3.3-3.3-1.5-3.3-3.3-3.3"
+            />
+            <path
+              class="camera-reel animate-right-reel"
+              d="m35.3 7.1c-2.8 0-5.1 2.3-5.1 5.1s2.3 5.1 5.1 5.1 5.1-2.3 5.1-5.1"
+            />
+          </svg>
+        </div>
+        <!-- CAMERA ANIMATION SECTION ENDS -->
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <!-- SEARCH BAR SECTION STARTS -->
+    <center><h1>Movie Recommendation</h1></center>
+    <div
+      class="form-group shadow-textarea"
+      style="margin-top: 30px; text-align: center; color: white;"
+    >
+      <input
+        type="text"
+        name="movie"
+        class="movie form-control"
+        id="autoComplete"
+        autocomplete="off"
+        placeholder="Enter the Movie Name"
+        style="
+          background-color: #ffffff;
+          border-color: #ffffff;
+          width: 60%;
+          color: #181818;
+        "
+        required="required"
+      />
+      <br />
+    </div>
+
+    <div class="form-group" style="text-align: center;">
+      <button
+        class="btn btn-block movie-button"
+        style="
+          background-color: #e50914;
+          text-align: center;
+          /* border-color: #e50914; */
+          width: 120px;
+        "
+        disabled="true"
+      >
+        <span style="font-family: Garamond, serif; font-size: 20px;">
+          Enter
+        </span>
+      </button>
+      <br />
+      <br />
+    </div>
+    <!--SEARCH BAR SECTION ENDS -->
+
+    <div id="loader" class="text-center"></div>
+
+    <div class="fail">
+      <center>
+        <h3>
+          Sorry! The movie you requested is not in our database. Please check
+          the spelling or try with other movies!
+        </h3>
+      </center>
+    </div>
+
+    <div class="results">
+      <center>
+        <h2 id="name" class="text-uppercase"></h2>
+      </center>
+    </div>
+
+    <!-- FOOTER SECTION STARTS -->
+    <div class="footer">
+      Made with
+      <span style="font-size: 150%; color: red;">&hearts;</span>
+      by Rishika
+    </div>
+    <!-- FOOTER SECTION ENDS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <script
+      type="text/javascript"
+      src="{{url_for('static', filename='autocomplete.js')}}"
+    ></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="{{url_for('static', filename='recommend.js')}}"
+    ></script>
+  </body>
+</html>
