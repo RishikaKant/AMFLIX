@@ -24,12 +24,14 @@
         <li><a href="#how-to-run-the-project?">How to run the project</a></li>
       </ul>
    </li>
-    <li><a href="#architecture">Architecture</li>
-    <li><a href="#content-based-filtering">Content based Filtering</li>
-    <li><a href="#similarity-score">Similarity Score</li>
-    <li><a href="#how-cosine=similarity-works">How Cosine Similarity works?</li>
-     
-    <li><a href="#navigating-through-the-app">Navigating through the App</a></li>
+   <li><a href="#architecture">Architecture</a></li>
+   <li><a href="#methods used">Methods used</a></li>
+   <ul>
+     <li><a href="#content-based-filtering">Content based Filtering</li>
+     <li><a href="#similarity-score">Similarity Score</li>
+     <li><a href="#how-cosine=similarity-works">How Cosine Similarity works?</li> 
+   </ul>
+      <li><a href="#navigating-through-the-app">Navigating through the App</a></li>
     <ul>
       <li><a href="#home-page">Home page</a></li>
       <li><a href="#searching-for-a-movie">Searching for a movie</a></li>
@@ -82,18 +84,20 @@ Create an account in https://www.themoviedb.org/, click on the `API` link from t
 
 ![Recommendation App](https://user-images.githubusercontent.com/36665975/168742738-5435cf76-1a42-4d87-94b4-999e5bfc48d3.png)
 
-## Content based Filtering
+## Methods Used
+
+### Content based Filtering
 Content-based recommendation systems uses their knowledge about each product to recommend new ones. Recommendations are based on attributes of the item. Content-based recommender systems work well when descriptive data on the content is provided beforehand. “Similarity” is measured against product attributes.
 
 Suppose I watch a movie in a particular genre, then I will be recommended movies within that specific genre. The movie's attributes, like title, year of release, director and cast, are also helpful in identifying similar movie content
 
-## Similarity Score : 
+### Similarity Score : 
 
    How does it decide which item is most similar to the item user likes? Here come the similarity scores.
    
    It is a numerical value ranges between zero to one which helps to determine how much two items are similar to each other on a scale of zero to one. This similarity score is obtained measuring the similarity between the text details of both of the items. So, similarity score is the measure of similarity between given text details of two items. This can be done by cosine-similarity.
    
-## How Cosine Similarity works?
+### How Cosine Similarity works?
   Cosine similarity is a metric used to measure how similar the documents are irrespective of their size. Mathematically, it measures the cosine of the angle between two vectors projected in a multi-dimensional space. The cosine similarity is advantageous because even if the two similar documents are far apart by the Euclidean distance (due to the size of the document), chances are they may still be oriented closer together. The smaller the angle, higher the cosine similarity.
   
   ![image](https://user-images.githubusercontent.com/36665975/70401457-a7530680-1a55-11ea-9158-97d4e8515ca4.png)
