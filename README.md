@@ -143,3 +143,4 @@ More about Cosine Similarity : [Understanding the Math behind Cosine Similarity]
 * [How to build a recommendation engine](https://www.youtube.com/watch?v=D4nXZMnKW4U)
 * [Implementation of movie recommendation](https://www.youtube.com/watch?v=A_78fGgQMjM)
 * [Recommender Systems](https://builtin.com/data-science/recommender-systems)
+* [Top recommendation engine algorithms](https://itnext.io/what-are-the-top-recommendation-engine-algorithms-used-nowadays-646f588ce639)
