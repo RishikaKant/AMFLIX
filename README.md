@@ -1,8 +1,8 @@
 <h1 align="center">Movie Recommendation System</h1>
 <p align="center">
- <a target="_blank" href="/">Presentation</a>
+ <a target="_blank" href="https://drive.google.com/file/d/1Fozu2_csK8sA6bWROcO0Br5j_GCJBaJh/view">Presentation</a>
  ·
- <a target="_blank" href="/">Video Demo</a>
+ <a target="_blank" href="https://www.youtube.com/watch?v=Pl_zaSPWx9k">Video Demo</a>
 </p>
 
 <!-- TABLE OF CONTENTS -->
