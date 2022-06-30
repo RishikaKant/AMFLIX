@@ -46,7 +46,7 @@
 </details>
 
 ## About the project
-* Movie Recommendation Engine - AMFLIX built during Microsoft Engage 2022 program
+* Movie Recommendation Engine - AMFLIX
 * It is a recommendation engine made using Content based Filtering approach
 
 ### Salient Features
